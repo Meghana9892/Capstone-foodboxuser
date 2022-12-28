@@ -1,0 +1,45 @@
+<div class="tbl">
+    <table class="table table-hover">
+       <thead>
+         <tr>
+           <th scope="col">Product Id</th>
+           <th scope="col">Product Name</th>
+           <th scope="col">Price</th>
+           <th scope="col">Quantity</th>
+           <th scope="col">TotalPrice</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let c of cart">
+           <td>{{c.product.productid}}</td>
+           <td>{{c.product.productname}}</td>
+           <td>{{c.product.price}}</td>
+           <td>{{c.qty}}</td>
+           <td>{{c.totalprice}}</td>
+           </tr>
+           </tbody>
+        </table>
+       </div>
+       <div class="row">
+        <div class="col-xl-8">
+         
+  
+        </div>
+        <div class="col-xl-3">
+          <ul class="list-unstyled">
+            <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>Rs.{{total}}</li>
+            <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Shipping</span>Free</li>
+          </ul>
+          <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
+              style="font-size: 25px;">Rs. {{total}}</span></p>
+        </div>
+        
+      </div>
+      
+      <div class="buy">
+      <input type="submit" class="login btn btn-success btn-rounded"  value="   Proceed to Payment  " (click)="payments()"> 
+      &nbsp; 
+      <button type="button" class="btn btn-success backbtn" (click)="back()">Back</button>
+  
+    </div>
+  

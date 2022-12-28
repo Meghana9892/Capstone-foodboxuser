@@ -1,0 +1,15 @@
+.Ordercomplete
+{
+    height:400px;
+    width: 400px;
+    margin-left: 550px;
+
+}
+
+h4{
+    font-size: 48px;
+  background: -webkit-linear-gradient( rgb(89, 243, 235),rgb(222, 148, 51));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 550px;
+}

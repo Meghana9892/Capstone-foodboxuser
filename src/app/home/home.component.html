@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home">Foodbox</a>
+      <button
+        class="navbar-toggler" 
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
+            
+              <li class="nav-item">
+                <a class="nav-link active" (click)="ngOnInit()">Menu</a>
+              </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Cuisine
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" (click)="cuisine('indian')">Indian</a></li>
+              <li><a class="dropdown-item" (click)="cuisine('chinese')">Chinese</a></li>
+              <li><a class="dropdown-item" (click)="cuisine('Italian')">Italian</a></li>
+        
+            </ul>
+          </li>
+          
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{loggeduser}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="password">Change Password</a></li>
+              <li><a class="dropdown-item" href="purchases">Orders</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" (click)="signout()">Sign out</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus">Contact us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search" #search >
+           <button class="btn btn-outline-success" type="submit" (click)="searchbyProductname(search.value)">Search</button>
+         </form>
+         <button class="btn btn-success" type="submit" style="margin-left: 10px;" (click)="viewcart()">View Cart</button>
+         
+      </div>
+      
+    </div>
+
+  </nav>
+  <br>
+  <div class="form-outline mb-4">
+    &nbsp; <label class="form-label" for="form1Example23" ><b>Sort by</b></label>    &nbsp;
+   Price <button class="btn btn-success" type="submit" style="margin-left: 10px;" (click)="sortbyPrice()">Low-High</button>
+   &nbsp;
+   Menu <button class="btn btn-success" type="submit" style="margin-left: 10px;" (click)="sortbyProductname()">Asc-Desc</button>
+  </div>
+  <br>
+  <h5>{{message}}</h5>
+  <div class="products">
+  
+  <div class="row">
+    <div class="row">
+        <div class="col-md-12 col-lg-4 mb-4 mb-lg-0" *ngFor="let i of products">
+          <div class="card cardstyle">
+            <div class="d-flex justify-content-between p-3">
+
+              
+            </div>
+            
+            <img src="https://thumbs.dreamstime.com/b/male-hand-lifts-to-up-glass-cloche-plate-hot-food-restaurant-smoked-time-close-140186395.jpg"
+            class="card-img-top" alt="dishes" />
+            
+            <div class="card-body">
+             
+              <div class="d-flex justify-content-between mb-3">
+                <h5 class="mb-0">{{i.productname}}</h5>
+          
+                <h5 class="text-dark mb-0"> {{i.cuisine}}</h5>
+                
+                <h5 class="text-dark mb-0">Rs. {{i.price}}</h5>
+
+              </div>
+              <input type="submit" class="btn btn-success" value="Add to cart" (click)="additem(i)"> 
+             
+            </div>
+           
+          </div>
+        </div>  
+          
+  </div>  
+</div>

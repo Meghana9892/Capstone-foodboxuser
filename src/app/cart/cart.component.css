@@ -1,0 +1,18 @@
+.tbl
+{
+    background-color:  rgb(135, 212, 208);
+    
+}
+th{
+    color: white;
+}
+td{
+    color: aliceblue;
+}
+.buy
+{
+
+    margin-left: 1000px;
+    margin-top: 100px;
+    
+}

@@ -1,0 +1,52 @@
+<section class="p-4 p-md-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-5">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <h3>Settings</h3>
+            <h6>Payment</h6>
+          </div>
+          <form >
+
+
+            <p class="fw-bold mb-4">Enter Card details</p>
+
+            <div class="form-outline mb-4">
+              <input type="text" id="formControlLgXsd" class="form-control form-control-lg" name="cardname" #cardname/>
+              <label class="form-label" for="formControlLgXsd" >Cardholder's Name</label>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-7">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgXM" class="form-control form-control-lg" name="cardnum" #cardnum />
+                  <label class="form-label" for="formControlLgXM" >Card Number</label>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="form-outline">
+                  <input type="text" id="formControlLgExpk" class="form-control form-control-lg"
+                    placeholder="MM/YYYY" name="expiry" #expiry/>
+                  <label class="form-label" for="formControlLgExpk">Expire</label>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-outline">
+                  <input type="password" id="formControlLgcvv" class="form-control form-control-lg"
+                    placeholder="cvv" name="cvv" #cvv/>
+                  <label class="form-label" for="formControlLgcvv">cvv</label>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-success btn-lg btn-block" (click)="buynow(cardname.value,cardnum.value,expiry.value,cvv.value)">Buy</button>
+            &nbsp;
+            <button class="btn btn-success btn-lg btn-block" (click)="back()">Back</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

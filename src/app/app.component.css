@@ -1,0 +1,29 @@
+.header
+{
+    height: 160px;
+}
+.logoimg
+{
+    height: 150px;
+    width: 180px;
+}
+.logo{
+    float: left;
+}
+
+.heading
+{
+    float: right;
+    margin-right: 700px;
+    margin-top: 50px;
+}
+h4{
+    font-size: 36px;
+  background: -webkit-linear-gradient( rgb(89, 243, 235),rgb(222, 148, 51));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbg
+{
+    background-color:  rgb(135, 212, 208);
+}

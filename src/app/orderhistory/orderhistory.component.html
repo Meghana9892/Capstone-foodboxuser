@@ -1,0 +1,22 @@
+<div class="tbl">
+    <table class="table table-hover">
+       <thead>
+         <tr>
+           <th scope="col">Product Name</th>
+           <th scope="col">Quantity</th>
+           <th scope="col">TotalPrice</th>
+           <th scope="col">Purchase Date</th>
+
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let c of purchases">
+           <td>{{c.productname}}</td>
+           <td>{{c.quantity}}</td>
+           <td>{{c.totalprice}}</td>
+           <td>{{c.purchasedate}}</td>
+           </tr>
+           </tbody>
+        </table>
+       </div>
+       <button type="button" class="btn btn-success backbtn" (click)="back()" >Back</button>
